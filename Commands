@@ -2,5 +2,5 @@
 2) terraform plan --> It will list the intended request which will be made to provider
 3) terraform apply --> To implement the terraform file 
 4) terraform destory --> will destory all terraform created resources
-5) terraform destory -t <resoucre_name>.<loacl_name> --->  This will destory only specified target {ex. }
+5) terraform destory -target <resoucre_name>.<loacl_name> --->  This will destory only specified target {ex. terraform destory -target aws_instance.myec2 }
 
