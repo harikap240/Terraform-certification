@@ -1,0 +1,51 @@
+Before using terraform resources we must spicfy provider (Amazon,Auze,etc). As this part is important in order to download the plugins for selected providers.
+
+When we run the following command
+
+terraform init --> it will look for the provider specified under the ".tf" file and based on it it will download the plugins for that provider.
+
+In terraform we have three types of providers.
+1) Hashicorp (Official provider maintained by Hashicorp)
+2) Partner provider ( maintaince of this kinf is done by partner/company)
+3) Community ( Used and created by person and maintained by person or a group)
+Ex. 
+
+Offical providers
+
+---------------------------------------------------------------------------------------------------------------
+Note in offical provide it can work in two ways as it officailly supported so soucre path filed goes to official 
+Hashicorp directory
+---------------------------------------------------------------------------------------------------------------
+# We strongly recommend using the required_providers block to set the
+# Azure Provider source and version being used
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "=4.1.0"
+    }
+  }
+}
+
+# Configure the Microsoft Azure Provider
+provider "azurerm" {}
+
+
+---------------------------------------------------------------------------------------------------------------
+Note in partner provider we need to specify the path and "required_provider" field
+as this is not official supported platform so it has different path which needss to be specified
+---------------------------------------------------------------------------------------------------------------
+terraform {
+  required_providers {
+    github = {
+      source  = "integrations/github"
+      version = "~> 6.0"
+    }
+  }
+}
+
+# Configure the GitHub Provider
+provider "github" {}
+
+
+
