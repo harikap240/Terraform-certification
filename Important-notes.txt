@@ -1,3 +1,4 @@
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
 Before using terraform resources we must spicfy provider (Amazon,Auze,etc). As this part is important in order to download the plugins for selected providers.
 
 When we run the following command
@@ -46,6 +47,25 @@ terraform {
 
 # Configure the GitHub Provider
 provider "github" {}
+----------------------------------------------------------------------xxxxxxx-------------------------------------------------------------------------------------
+
+Statefile : This would be created automatically whenever we apply any terraform file.
+
+It stores the information about the resoucres created by terraform files in statefile. So it is recommended to keep a backup and not to edit anything under this file. As this file has all the information about the configured resouces using terraform apply.
+
+Basically it sotres the information of all resaouces which were created in statefile.
+
+
+________________________________________________________________________________________________________________________________________________________________
+
+Desired state: Terraform primary objective is to create modify and destory infrastructure to match desired state describe in terraform configuration 
+
+
+
+Current state: Actual state of resource that is currently deployed 
+
+
+
 
 
 
